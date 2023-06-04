@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "GoPro HERO6 4K Action Camera - Black",
+      "price": 120,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/1.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 2,
+      "title": "Canon camera 20x zoom, Black color EOS 2000",
+      "price": 100,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/2.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 3,
+      "title": "Xiaomi Redmi 8 Original Global Version 4GB",
+      "price": 40,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/3.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 4,
+      "title": "Apple iPhone 12 Pro 6.1\" RAM 6GB 512GB Unlocked",
+      "price": 2000,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/4.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 5,
+      "title": "Apple Watch Series 1 Sport Case 38mm Black",
+      "price": 4000,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/5.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 6,
+      "title": "T-shirts with multiple colors, for men and lady",
+      "price": 1500,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/6.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    },
+    {
+      "id": 7,
+      "title": "Gaming Headset 32db Blackbuilt in mic",
+      "price": 5900,
+      "quantity": 2,
+      "image": "https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/7.webp",
+      "description": "This is an awesome product. Please visit nearby stores to buy it."
+    }
+  ]
+}

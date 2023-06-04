@@ -1,0 +1,32 @@
+<header>
+  <div class="p-3 text-center bg-white border-bottom">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-lg-2 col-sm-4 col-4">
+          <a href="/" class="float-start">
+            <img
+              src="{{ url_for('static', filename='images/logo.gif') }}"
+              alt="Example Image"
+              height="60"
+            />
+          </a>
+        </div>
+        <div class="col-lg-8 col-sm-4 col-4"></div>
+        <div class="col-lg-2 col-sm-4 col-4">
+          <div class="d-flex justify-content-end align-items-center">          
+            <a href="{{ url_for('cart_page') }}" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> My Cart
+               <span class="cart-count">
+                {% if cart_count %}
+                  {{ cart_count }}
+                {% else %}
+                  0
+                {% endif %}
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

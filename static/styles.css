@@ -1,0 +1,57 @@
+.icon-hover:hover {
+  border-color: #3b71ca !important;
+  background-color: white !important;
+  color: #3b71ca !important;
+}
+
+.icon-hover:hover i {
+  color: #3b71ca !important;
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  transform: translateX(-50%);
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#snackbar.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 4px 6px;
+  line-height: 1;
+}
+
