@@ -33,80 +33,74 @@
                 {% if cart_items %}
                 <div class="row">
                   <div class="col-lg-12">
-                    {% for cart_item in cart_items %}
-                    <div class="card mb-3">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-row align-items-center">
-                            <div>
-                              <img
-                                src="{{ cart_item.product.image }}"
-                                class="img-fluid rounded-3"
-                                alt="Shopping item"
-                                style="width: 65px"
-                              />
-                            </div>
-                            <div class="ms-3">
-                              <h5>{{ cart_item.product.title }}</h5>
-                              <p class="small mb-0">
-                                {{ cart_item.product.description }}
-                              </p>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-row align-items-center">
-                            <div style="width: 50px">
-                              <h5 class="fw-normal mb-0">
-                                {{ cart_item.quantity }}
-                              </h5>
-                            </div>
-                            <div style="width: 80px">
-                              <h5 class="mb-0">
-                                {{ cart_item.product.price }}
-                              </h5>
-                            </div>
-                            <div
-                              style="width: 100px;display: flex;mx-auto;flex-direction: row;"
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Image</th>
+                          <th scope="col">Product Name</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for cart_item in cart_items %}
+                        <tr>
+                          <td>
+                            <img
+                              src="{{ cart_item.product.image }}"
+                              class="img-fluid rounded-3"
+                              alt="Shopping item"
+                              style="width: 65px"
+                            />
+                          </td>
+                          <td>{{ cart_item.product.title }}</td>
+                          <td>{{ cart_item.quantity }}</td>
+                          <td>{{ cart_item.product.price }}</td>
+                          <td>
+                            <form
+                              method="POST"
+                              action="{{ url_for('remove_from_cart', product_id=cart_item.product.id) }}"
                             >
-                              <form
-                                method="POST"
-                                action="{{ url_for('remove_from_cart', product_id=cart_item.product.id) }}"
-                                style="display: flex; flex-direction: row"
+                              <button
+                                type="submit"
+                                class="btn btn-link text-muted"
+                                onclick="return confirm('Are you sure you want to remove this item from the cart?');"
                               >
-                                <button
-                                  type="submit"
-                                  class="btn btn-link text-muted"
-                                  onclick="return confirm('Are you sure you want to remove this item from the cart?');"
-                                >
-                                  <i class="fas fa-trash-alt"></i>
-                                </button>
-                              </form>
-                              <form
-                                method="GET"
-                                action="{{ url_for('product_detail', product_id=cart_item.product.id) }}"
+                                <i class="fas fa-trash-alt"></i>
+                              </button>
+                            </form>
+                            <form
+                              method="GET"
+                              action="{{ url_for('product_detail', product_id=cart_item.product.id) }}"
+                            >
+                              <button
+                                type="submit"
+                                class="btn btn-link text-muted"
                               >
-                                <button
-                                  type="submit"
-                                  class="btn btn-link text-muted"
-                                >
-                                  <i class="fa-sharp fa-regular fa-eye"></i>
-                                </button>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
+                                <i class="fa-sharp fa-regular fa-eye"></i>
+                              </button>
+                            </form>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-lg btn-block"
-                  onclick="location.href = '{{ url_for('checkout_page') }}';"
-                >
-                  Checkout
-                </button>
-
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="d-flex justify-content-end">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-lg"
+                        onclick="location.href = '{{ url_for('checkout_page') }}';"
+                      >
+                        Checkout
+                      </button>
+                    </div>
+                  </div>
+                </div>
                 {% else %}
                 <div class="text-center">
                   <h5>Your cart is empty</h5>
